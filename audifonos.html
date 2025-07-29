@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inventario Completo de Audífonos</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+
+  h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .category-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .product {
+    background: white;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,123,255,0.15);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0,123,255,0.35);
+  }
+
+  .product img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #f9faff;
+    border-bottom: 2px solid #007bff;
+  }
+
+  .product h3 {
+    font-size: 1.15rem;
+    color: #007bff;
+    margin: 12px 0 8px 0;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .product p {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 0 15px 15px 15px;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .product {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  /* Animación secuencial */
+  .product:nth-child(1) { animation-delay: 0.1s; }
+  .product:nth-child(2) { animation-delay: 0.2s; }
+  .product:nth-child(3) { animation-delay: 0.3s; }
+  .product:nth-child(4) { animation-delay: 0.4s; }
+  .product:nth-child(5) { animation-delay: 0.5s; }
+  .product:nth-child(6) { animation-delay: 0.6s; }
+  .product:nth-child(7) { animation-delay: 0.7s; }
+  .product:nth-child(8) { animation-delay: 0.8s; }
+  .product:nth-child(9) { animation-delay: 0.9s; }
+  .product:nth-child(10) { animation-delay: 1.0s; }
+  .product:nth-child(11) { animation-delay: 1.1s; }
+  .product:nth-child(12) { animation-delay: 1.2s; }
+  .product:nth-child(13) { animation-delay: 1.3s; }
+  .product:nth-child(14) { animation-delay: 1.4s; }
+  .product:nth-child(15) { animation-delay: 1.5s; }
+  .product:nth-child(16) { animation-delay: 1.6s; }
+  .product:nth-child(17) { animation-delay: 1.7s; }
+  .product:nth-child(18) { animation-delay: 1.8s; }
+  .product:nth-child(19) { animation-delay: 1.9s; }
+  .product:nth-child(20) { animation-delay: 2.0s; }
+  .product:nth-child(21) { animation-delay: 2.1s; }
+  .product:nth-child(22) { animation-delay: 2.2s; }
+  .product:nth-child(23) { animation-delay: 2.3s; }
+  .product:nth-child(24) { animation-delay: 2.4s; }
+  .product:nth-child(25) { animation-delay: 2.5s; }
+  .product:nth-child(26) { animation-delay: 2.6s; }
+  .product:nth-child(27) { animation-delay: 2.7s; }
+  .product:nth-child(28) { animation-delay: 2.8s; }
+  .product:nth-child(29) { animation-delay: 2.9s; }
+  .product:nth-child(30) { animation-delay: 3.0s; }
+
+  @media (max-width: 760px) {
+    .category-group {
+      justify-content: center;
+      gap: 18px;
+    }
+    .product {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .product {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>Inventario Completo de Audífonos</h2>
+<div class="category-group">
+
+  <!-- Audífonos In-ear (Wireless) -->
+  <div class="product"><img src="img/samsung_buds2.jpg" alt="Samsung Buds 2" /><h3>Samsung Buds 2</h3><p>Sonido premium, cancelación de ruido activa.</p></div>
+  <div class="product"><img src="img/samsung_buds_live.jpg" alt="Samsung Buds Live" /><h3>Samsung Buds Live</h3><p>Diseño ergonómico y batería de larga duración.</p></div>
+  <div class="product"><img src="img/airpods_pro.jpg" alt="AirPods Pro" /><h3>Apple AirPods Pro</h3><p>Cancelación de ruido, modo transparencia, calidad profesional.</p></div>
+  <div class="product"><img src="img/airpods_2gen.jpg" alt="AirPods 2da Gen" /><h3>Apple AirPods 2da Gen</h3><p>Sonido envolvente y fácil conexión.</p></div>
+  <div class="product"><img src="img/moto_buds.jpg" alt="Moto Buds" /><h3>Motorola Moto Buds</h3><p>Diseño compacto, resistente al agua.</p></div>
+  <div class="product"><img src="img/lg_tone_free.jpg" alt="LG Tone Free" /><h3>LG Tone Free</h3><p>Sonido Meridian, estuche UVnano.</p></div>
+  <div class="product"><img src="img/huawei_freebuds.jpg" alt="Huawei FreeBuds" /><h3>Huawei FreeBuds</h3><p>Cancelación de ruido, batería extendida.</p></div>
+  <div class="product"><img src="img/xiaomi_earbuds.jpg" alt="Xiaomi Earbuds" /><h3>Xiaomi Mi True Wireless Earbuds</h3><p>Bluetooth 5.0, sonido nítido.</p></div>
+  <div class="product"><img src="img/vivo_tws.jpg" alt="Vivo TWS" /><h3>Vivo TWS Earphone</h3><p>Sonido Hi-Fi, diseño elegante.</p></div>
+  <div class="product"><img src="img/oppo_enco.jpg" alt="OPPO Enco" /><h3>OPPO Enco W51</h3><p>Cancelación de ruido, carga rápida.</p></div>
+  <div class="product"><img src="img/realme_buds.jpg" alt="Realme Buds" /><h3>Realme Buds Q2</h3><p>Sonido potente, batería de larga duración.</p></div>
+
+  <!-- Audífonos de Diadema Wireless -->
+  <div class="product"><img src="img/sony_wh1000xm4.jpg" alt="Sony WH-1000XM4" /><h3>Sony WH-1000XM4</h3><p>Cancelación de ruido líder, sonido excepcional.</p></div>
+  <div class="product"><img src="img/bose_700.jpg" alt="Bose 700" /><h3>Bose 700</h3><p>Comodidad extrema, micrófonos avanzados para llamadas.</p></div>
+  <div class="product"><img src="img/jbl_live650.jpg" alt="JBL Live 650BTNC" /><h3>JBL Live 650BTNC</h3><p>Cancelación activa, batería de 30 horas.</p></div>
+
+  <!-- Audífonos de Diadema con Cable -->
+  <div class="product"><img src="img/audio-technica_m50x.jpg" alt="Audio-Technica M50x" /><h3>Audio-Technica M50x</h3><p>Sonido profesional, con cable desmontable.</p></div>
+  <div class="product"><img src="img/sony_mdr7506.jpg" alt="Sony MDR-7506" /><h3>Sony MDR-7506</h3><p>Estándar de estudio, diseño clásico con cable.</p></div>
+  <div class="product"><img src="img/beyerdynamic_dt770.jpg" alt="Beyerdynamic DT770" /><h3>Beyerdynamic DT770</h3><p>Comodidad y aislamiento con cable de alta calidad.</p></div>
+
+  <!-- Audífonos Deportivos (con cable e inalámbricos) -->
+  <div class="product"><img src="img/jbl_endurance_peak.jpg" alt="JBL Endurance Peak" /><h3>JBL Endurance Peak</h3><p>Resistentes al sudor, ajuste seguro para deportes.</p></div>
+  <div class="product"><img src="img/bose_sport_earbuds.jpg" alt="Bose Sport Earbuds" /><h3>Bose Sport Earbuds</h3><p>Inalámbricos, sonido claro y ajuste cómodo para ejercicio.</p></div>
+
+  <!-- Audífonos con cable básicos -->
+  <div class="product"><img src="img/sony_earbuds_cable.jpg" alt="Sony Earbuds con cable" /><h3>Sony Earbuds con Cable</h3><p>Sonido claro y cómodo, conexión 3.5mm.</p></div>
+  <div class="product"><img src="img/jbl_c100si.jpg" alt="JBL C100SI" /><h3>JBL C100SI</h3><p>Bajo potente, cable con micrófono y control.</p></div>
+  <div class="product"><img src="img/skullcandy_inkd.jpg" alt="Skullcandy Ink'd" /><h3>Skullcandy Ink'd</h3><p>Sonido balanceado con diseño juvenil.</p></div>
+
+  <!-- Audífonos gamer -->
+  <div class="product"><img src="img/logitech_g_pro.jpg" alt="Logitech G Pro X" /><h3>Logitech G Pro X</h3><p>Audio de alta precisión, micrófono profesional.</p></div>
+  <div class="product"><img src="img/razer_kraken.jpg" alt="Razer Kraken" /><h3>Razer Kraken</h3><p>Sonido envolvente 7.1, diseño cómodo para largas sesiones.</p></div>
+  <div class="product"><img src="img/hyperx_cloud.jpg" alt="HyperX Cloud" /><h3>HyperX Cloud II</h3><p>Gran aislamiento y micrófono de alta calidad.</p></div>
+
+</div>
+
+</body>
+</html>

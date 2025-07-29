@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inventario y Catálogo</title>
+<style>
+  /* Reset básico */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px 20px;
+    background: #f0f4ff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Menú barra */
+  .menu-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background-color: #007bff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,123,255,0.3);
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
+  /* Botones del menú */
+  .menu-bar button {
+    background: white;
+    color: #007bff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 9px rgba(0,123,255,0.25);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease,
+                box-shadow 0.3s ease, transform 0.2s ease;
+    min-width: 130px;
+    text-align: center;
+  }
+
+  .menu-bar button:hover,
+  .menu-bar button:focus {
+    background-color: #0056b3;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,86,179,0.6);
+    transform: scale(1.07);
+    outline: none;
+  }
+
+  .menu-bar button:active {
+    transform: scale(0.98);
+  }
+
+  /* Contenedor principal */
+  #content {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,123,255,0.15);
+    min-height: 400px;
+  }
+
+  /* Estilo básico para títulos y texto */
+  h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .menu-bar button {
+      min-width: 100px;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .menu-bar button {
+      min-width: 90px;
+      padding: 8px 12px;
+      font-size: 0.85rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="menu-bar">
+  <button onclick="loadSection('audifonos')">Audífonos</button>
+  <button onclick="loadSection('protectores')">Protectores</button>
+  <button onclick="loadSection('pantallas')">Pantallas</button>
+  <button onclick="loadSection('pilas')">Pilas</button>
+  <button onclick="loadSection('tabillas')">Tabillas</button>
+  <button onclick="loadSection('lentes')">Lentes</button>
+  <button onclick="loadSection('pegamento')">Pegamento</button>
+  <button onclick="loadSection('accesorios')">Accesorios</button>
+</nav>
+
+<!-- Contenedor donde se carga contenido -->
+<div id="content">
+  <h2>Bienvenido a nuestro Inventario</h2>
+  <p>Selecciona una categoría del menú para ver los productos disponibles.</p>
+</div>
+
+<script>
+  function loadSection(section) {
+    const contentDiv = document.getElementById('content');
+    fetch(`${section}.html`)
+      .then(res => {
+        if (!res.ok) throw new Error('No se pudo cargar el apartado');
+        return res.text();
+      })
+      .then(html => {
+        contentDiv.innerHTML = html;
+      })
+      .catch(err => {
+        contentDiv.innerHTML = `<div class="error-msg">No se pudo cargar el apartado. Intenta de nuevo.</div>`;
+        console.error('Error al cargar sección:', err);
+      });
+  }
+</script>
+
+
+</body>
+</html>
